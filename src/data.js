@@ -52,7 +52,7 @@ export const data = {
       tags: ["React Native", "Expo", "TypeScript", "WebSocket", "JWT", "REST API"],
       github: "https://github.com/BERNARDOBOJALIL/FrontendAllora",
       demo: "",
-      year: "2025",
+      year: "2026",
     },
     {
       id: 2,
