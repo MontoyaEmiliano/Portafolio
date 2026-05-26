@@ -1,63 +1,62 @@
 # Portafolio — Emiliano Montoya Velázquez
 
-Portafolio personal desarrollado en React. Diseño oscuro profesional.
+Portafolio personal en **React + Vite**. Listo para deploy en Vercel, Netlify o GitHub Pages.
 
-## 🚀 Cómo ejecutar
+## 🚀 Desarrollo local
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
 
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+Abre [http://localhost:5173](http://localhost:5173)
 
-## 📦 Construir para producción
+## 📦 Build para producción
 
 ```bash
 npm run build
 ```
 
-La carpeta `build/` estará lista para subir a cualquier hosting.
+## 🌐 Deploy en Vercel (solución al error anterior)
 
-## 🌐 Deploy gratuito sugerido
+Este proyecto usa **Vite** en lugar de react-scripts, lo que resuelve el error
+`Permission denied` que aparecía en Vercel.
 
-- **GitHub Pages**: sube el contenido de `build/` a la rama `gh-pages`
-- **Netlify**: arrastra la carpeta `build/` en netlify.com
-- **Vercel**: conecta tu repositorio en vercel.com
+### Pasos:
+1. Sube este proyecto a un repositorio en GitHub
+2. Ve a [vercel.com](https://vercel.com) → New Project → importa el repo
+3. Vercel detecta Vite automáticamente — no necesitas cambiar nada
+4. Haz clic en **Deploy** ✅
 
-## ✏️ Personalizar
+### Configuración de Vercel (ya detectada automáticamente):
+- **Framework**: Vite
+- **Build command**: `npm run build`
+- **Output directory**: `dist`
 
-Todo el contenido del portafolio está centralizado en:
+## ✏️ Personalizar contenido
 
-```
-src/data.js
-```
-
-Edita ese archivo para:
-- Cambiar tu nombre, bio, contacto
-- Agregar/editar habilidades con niveles
-- Agregar proyectos nuevos con descripción y links
-- Actualizar experiencia laboral y educación
+Todo está en `src/data.js`. Edita ese archivo para:
+- Agregar proyectos nuevos
+- Actualizar habilidades
+- Cambiar datos de contacto
 
 ## 📁 Estructura
 
 ```
-src/
-├── App.jsx              # Componente raíz
-├── data.js              # ← EDITA AQUÍ tu información
-├── index.css            # Variables y estilos globales
-└── components/
-    ├── Navbar.jsx
-    ├── Hero.jsx
-    ├── Skills.jsx
-    ├── Projects.jsx
-    ├── Experience.jsx
-    ├── Contact.jsx
-    └── Footer.jsx
+├── index.html              ← Vite entry point (raíz del proyecto)
+├── vite.config.js
+├── package.json
+└── src/
+    ├── main.jsx
+    ├── App.jsx
+    ├── data.js             ← EDITA AQUÍ tu info
+    ├── index.css
+    └── components/
+        ├── Navbar.jsx
+        ├── Hero.jsx
+        ├── Skills.jsx
+        ├── Projects.jsx
+        ├── Experience.jsx
+        ├── Contact.jsx
+        └── Footer.jsx
 ```
-
-## 🛠 Stack
-
-- React 18
-- CSS-in-JS (estilos inline con variables CSS)
-- Google Fonts: Syne + DM Mono + DM Sans
